@@ -52,3 +52,8 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  # Use Shoulda Matchers for one-liners to test common Rails functionality
+  gem 'shoulda-matchers', '~> 5.0'
+end
+
