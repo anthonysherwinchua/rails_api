@@ -23,5 +23,10 @@ module RailsApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Sets the exceptions application invoked by the ShowException middleware when an exception happens. Defaults to ActionDispatch::PublicExceptions.new(Rails.public_path).
+    # ShowException invokes the method `render_exception`
+    # https://apidock.com/rails/v5.2.3/ActionDispatch/ShowExceptions/render_exception
+    config.exceptions_app = self.routes
   end
 end
